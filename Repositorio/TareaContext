@@ -1,0 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using PlatziEF.Models;
+
+namespace Platzi.Repositorio;
+
+public class TareaContext: DbContext
+{
+    public DbSet<Categoria> Categoria {get; set;}
+    public DbSet<Tarea> Tarea {get; set;}
+
+    public TareaContext(DbContextOptions<TareaContext> options) : base (options){}
+    
+
+}
